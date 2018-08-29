@@ -62,6 +62,7 @@ class Response:
 
     def reprompt(self, text=None, ssml=None):
         data = Response._output_speech_factory(text, ssml)
+        self.__response["reprompt"] = {}
         self.__response["reprompt"]["outputSpeech"] = data
 
     @property
